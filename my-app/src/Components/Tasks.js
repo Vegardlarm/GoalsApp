@@ -1,10 +1,11 @@
 import React from 'react';
+import TaskList from './TaskList';
 
 const Tasks = () => {
   return (
     <div>
       <h1>Welcome to the task page</h1>
-      <p>This is the task page content.</p>
+      <TaskList />
     </div>
   );
 };

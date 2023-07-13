@@ -2,6 +2,7 @@ import React from 'react';
 import '../Css/Home.css'; // Import the CSS file for styling
 import ThreeDComponent from './ThreeDComponent';
 import TaskList from './TaskList';
+import City from '../Images/neon_2.png';
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <div className="hero">
         <img
           className="hero-image"
-          src="/path/to/hero-image.jpg"
+          src={City}
           alt="Hero Image"
         />
       </div>
@@ -18,7 +19,7 @@ const Home = () => {
         <p className="description">
           Track your tasks and goals in a gaming-inspired environment.
         </p>
-        <TaskList />
+        
         <h3>Want to save your data?</h3>
         <div className="cta-buttons">
           <button className="cta-button">Register</button>

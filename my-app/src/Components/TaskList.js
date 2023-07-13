@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../Css/TaskList.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const TaskList = () => {
   const [taskInput, setTaskInput] = useState('');
@@ -12,7 +15,9 @@ const TaskList = () => {
 
   const handleAddTask = () => {
     if (taskInput.trim() !== '') {
-      setTasks([...tasks, { name: taskInput, done: false }]);
+      const capitalizedTaskName =
+      taskInput.charAt(0).toUpperCase() + taskInput.slice(1);
+      setTasks([...tasks, { name: capitalizedTaskName, done: false }]);
       setTaskInput('');
     }
   };
@@ -67,25 +72,25 @@ const TaskList = () => {
         </button>
       </div>
 
-      
-
       <ul className="task-list">
         {tasks.map((task, index) => (
           <li key={index} className="task-item">
-            <input
-              type="checkbox"
-              checked={task.done}
-              onChange={() => handleTaskToggle(index)}
-              className="task-checkbox"
-            />
             <span className={task.done ? 'task-name task-done' : 'task-name'}>
               {task.name}
             </span>
+            <div
+              className={`task-checkbox ${task.done ? 'checked' : ''}`}
+              onClick={() => handleTaskToggle(index)}
+            >
+              {task.done && <FontAwesomeIcon icon={faCheck} className="check-icon" />}
+            </div>
             <button
               onClick={() => handleDeleteTask(index)}
               className="delete-task-btn"
             >
-              Delete
+              <span className="delete-icon">
+                <FontAwesomeIcon icon={faTimes} />
+              </span>
             </button>
           </li>
         ))}
@@ -95,11 +100,15 @@ const TaskList = () => {
         <div className="progress-bar" style={{ width: `${progress}%` }} />
       </div>
       <h3>{`${progress.toFixed(1)}%`}</h3>
-      </div>
+    </div>
   );
 };
 
 export default TaskList;
+
+
+
+
 
 
 

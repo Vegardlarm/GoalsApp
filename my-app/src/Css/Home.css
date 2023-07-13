@@ -1,12 +1,16 @@
 .landing-page {
+    display:flex ;
     text-align: center;
-    padding: 50px;
+    padding: 100px;
   }
   
   .hero-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     border-radius: 8px;
+    margin: 10px;
+    
+
   }
   
   .heading {

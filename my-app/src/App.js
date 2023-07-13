@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import Tasks from './Components/Tasks';
 import Login from './Components/Login';
 import About from './Components/About';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
@@ -17,7 +18,11 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      
+      <Footer />
     </Router>
+
+    
   );
 };
 

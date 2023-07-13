@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link to="/about" className="navbar-link-text">About</Link>
           </li>
           <li className={`navbar-link ${location.pathname === '/tasks' ? 'active' : ''}`}>
-            <Link to="/tasks" className="navbar-link-text">Task</Link>
+            <Link to="/tasks" className="navbar-link-text">Tasks</Link>
           </li>
         </ul>
         <Link to="/login" className="navbar-button-link">

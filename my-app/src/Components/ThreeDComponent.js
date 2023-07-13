@@ -16,34 +16,33 @@ const ThreeDComponent = () => {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
 
-    // Reduce the size of the renderer
-    const width = 500;
-    const height = 300;
+    const width = 400;
+    const height = 200;
     renderer.setSize(width, height);
 
-    const geometry = new THREE.BoxGeometry(3, 3, 3); // Adjust the size of the cube
+    const geometry = new THREE.BoxGeometry(3, 3, 3); 
     const material = new THREE.MeshPhongMaterial({ color: 0x00aaff });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
-    // Add directional light
+    
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(1, 1, 1);
     scene.add(directionalLight);
 
-    // Add ambient light
-    const ambientLight = new THREE.AmbientLight(0x404040); // Adjust the ambient light color
+    
+    const ambientLight = new THREE.AmbientLight(0x404040); 
     scene.add(ambientLight);
 
-    // Adjust the camera position
+    
     camera.position.z = 5;
 
-    const rotateSpeed = 0.001; // Adjust the rotation speed
+    const rotateSpeed = 0.001; 
 
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Update the cube's rotation based on user interaction
+      
       cube.rotation.x += cubeRotation.current.x;
       cube.rotation.y += cubeRotation.current.y;
 

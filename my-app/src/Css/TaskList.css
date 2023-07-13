@@ -16,22 +16,37 @@
   flex: 1;
   padding: 10px;
   border: none;
-  border-radius: 3px;
-  margin-right: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius:5px;
+  margin-right: 0;
   font-size: 1rem;
   background-color: rgb(53, 57, 65);
-  border: white 1px solid;
-  color:  white;
+  border: #4c9aff 3px solid;
+  color: white;
+}
+
+.task-input:focus, input:focus{
+  outline: none;
 }
 
 .add-task-btn {
-  padding: 10px 20px;
-  background-color: #4caf50;
+  padding: 0px 20px;
+  background: linear-gradient(
+
+    90deg,
+
+    #4c9aff 0%,
+
+    #036cf5 100%
+
+  );
+
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px ;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .add-task-btn:hover {
@@ -51,11 +66,32 @@
 }
 
 .task-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
   margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.task-checkbox.checked {
+  background-color: green;
+}
+
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .task-name {
   font-size: 16px;
+  color: white;
 }
 
 .task-done {
@@ -78,15 +114,20 @@
   box-shadow: 0 0 5px 5px rgba(3, 87, 197, 0.5);
 }
 
-h3{
-  color: #4c9aff;
+h3 {
+  color: #ffffff;
 }
-.delete-task-btn{
-  padding: 5px 10px;
+
+.delete-task-btn {
+  padding: 3px 8px;
   background-color: #b43813;
   color: #fff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: 0.8rem;
+}
+
+.delete-icon {
+  font-size: 20px; 
 }
