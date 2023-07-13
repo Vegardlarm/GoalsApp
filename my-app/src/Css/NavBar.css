@@ -1,15 +1,15 @@
 .navbar {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(0, 0, 0);
+  background-color: #4895EF;
   padding: 10px;
 }
 
 .navbar-logo {
   font-size: 1.5rem;
   font-weight:400;
-  color: #2196f3 !important;
 }
 
 .navbar-right {
@@ -34,8 +34,8 @@
 }
 
 .navbar-button {
-  background-color: #4c9aff;
-  color: white;
+  background-color: #ffffff;
+  color: #4895EF;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;

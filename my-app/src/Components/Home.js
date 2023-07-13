@@ -1,33 +1,21 @@
 import React from 'react';
-import '../Css/Home.css'; // Import the CSS file for styling
-import ThreeDComponent from './ThreeDComponent';
-import TaskList from './TaskList';
+import '../Css/Home.css';
 import City from '../Images/neon_2.png';
 
 const Home = () => {
   return (
-    <div className="landing-page">
-      <div className="hero">
-        <img
-          className="hero-image"
-          src={City}
-          alt="Hero Image"
-        />
-      </div>
-      <div className="landing-content">
-        <h1 className="heading">Welcome to Your Task and Goal Tracker!</h1>
-        <p className="description">
-          Track your tasks and goals in a gaming-inspired environment.
-        </p>
-        
-        <h3>Want to save your data?</h3>
-        <div className="cta-buttons">
-          <button className="cta-button">Register</button>
-          <button className="cta-button">Login</button>
+    <div className="home-page">
+      <div className="left-section">
+        <h2>Gamer Goals</h2>
+        <h1>Sign up for free today and start dominating your tasks with the power of Gamer Goals. Unleash your inner hero and conquer your goals like never before.</h1>
+        <div className="buttons">
+          <button className="signup-button">Sign Up</button>
+          <button className="start-free-button">Start Free</button>
         </div>
       </div>
-      
-      <ThreeDComponent />
+      <div className="right-section">
+        <img src={City} alt="Squiggle" className="image" />
+      </div>
     </div>
   );
 };

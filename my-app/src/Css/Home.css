@@ -1,47 +1,56 @@
-.landing-page {
-    display:flex ;
-    text-align: center;
-    padding: 100px;
-  }
-  
-  .hero-image {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-    margin: 10px;
-    
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
 
-  }
-  
-  .heading {
-    font-size: 32px;
-    margin-top: 30px;
-  }
-  
-  .description {
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  
-  .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .cta-button {
-    padding: 12px 20px;
-    font-size: 1rem;
-    background-color: #4c9aff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .cta-button:hover {
-    background-color: #007eff;
-  }
+.left-section {
+  flex: 0.4; /* Adjust the value to change the width */
+  margin-left: 50px; /* Add margin to create space */
+}
+
+.right-section {
+  flex: 0.6; /* Adjust the value to change the width */
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.signup-button,
+.start-free-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-button {
+  background-color: #ffffff;
+  color: black;
+}
+
+.start-free-button {
+  background-color: #ffffff;
+  color: black;
+  margin-left: 10px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h2{
+  color: rgb(0, 0, 0);
+}
 
   
   
