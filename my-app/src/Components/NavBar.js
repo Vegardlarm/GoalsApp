@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../Css/NavBar.css';
 
 const Navbar = () => {
-  const location = useLocation(); // Get the current location
+  const location = useLocation(); 
 
   return (
     <nav className="navbar">
