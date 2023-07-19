@@ -21,10 +21,10 @@ const Navbar = () => {
           <Link to="/login"><button className="sign-up-button">Sign up</button></Link>
         </ul>
       </div>
-      <div className="hamburger-menu" onClick={toggleMenu}>
-        <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
-        <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
-        <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+      <div className={`hamburger-menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <div className="bar" />
+        <div className="bar" />
+        <div className="bar" />
       </div>
     </nav>
   );

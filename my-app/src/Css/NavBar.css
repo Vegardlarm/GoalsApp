@@ -22,7 +22,6 @@
   cursor: pointer;
   font-size: 16px;
   border: 1px solid #ffffff;
-  
 }
 
 .navbar-logo {
@@ -63,8 +62,22 @@
   height: 2px;
   background-color: #fff;
   margin: 4px 0;
-  transition: 0.4s;
+  transition: transform 0.1s; /* Added transition for smooth animation */
 }
+
+/* Styling for the "X" shape of the hamburger menu icon when open */
+.hamburger-menu.open .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar when the menu is open */
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
 
 
 @media screen and (max-width: 992px) {
@@ -78,12 +91,9 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    padding-left:50px;
+    padding-left: 50px;
     padding-right: 50px;
   }
-
-  
-
 
   .menu-container.open {
     display: flex;
@@ -106,44 +116,40 @@
   }
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-  
   .menu-container {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    left: 0; /* Centering the menu container horizontally */
-    right: 0; /* Taking the full width */
+    left: 0;
+    right: 0;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
   }
 
-  /* Show the menu items in a column layout when the hamburger menu is open */
   .menu-container.open {
     display: flex;
-    align-items: center; 
+    align-items: center;
   }
 
-  
   .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     font-size: 20px;
-    width: 100%; 
+    width: 100%;
   }
 
   .menu li {
     padding: 10px 0;
   }
 }
+
+
 
 
 
