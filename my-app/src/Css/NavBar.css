@@ -1,4 +1,4 @@
-/* Styling for larger screens */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -8,7 +8,7 @@
   padding: 10px;
 }
 
-/* Styling for the logo */
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -29,7 +29,7 @@
   color: inherit;
 }
 
-/* Styling for the menu items (default row layout) */
+
 .menu {
   list-style: none;
   margin: 0;
@@ -49,7 +49,7 @@
   color: inherit;
 }
 
-/* Styling for the hamburger menu icon */
+
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -62,16 +62,16 @@
   height: 2px;
   background-color: #fff;
   margin: 4px 0;
-  transition: transform 0.1s; /* Added transition for smooth animation */
+  transition: transform 0.1s; 
 }
 
-/* Styling for the "X" shape of the hamburger menu icon when open */
+
 .hamburger-menu.open .bar:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger-menu.open .bar:nth-child(2) {
-  opacity: 0; /* Hide the middle bar when the menu is open */
+  opacity: 0; 
 }
 
 .hamburger-menu.open .bar:nth-child(3) {
